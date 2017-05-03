@@ -62,6 +62,7 @@ int main(int argc, char *argv[]){
 		ib=sqlite3_exec(psl, "BEGIN EXCLUSIVE", NULL, NULL, &zErrMsg);
 		if(SQLITE_OK!=ib){LOG_I_CIFNOTNULLSQLITEFREEs(ib,zErrMsg) throw 0;}
 		auto trd=readstreamintovector<1>(cin);
+		trd.shrink_to_fit();
 		auto sbptr=trd.data();
 		auto septr=sbptr+trd.size()-1;
 		constexpr auto lenlongestenglishword=sizeof "Antidisestablishmentarianism"-1;

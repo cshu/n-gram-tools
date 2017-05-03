@@ -67,6 +67,7 @@ int main(int argc, char *argv[]){
 		sumofngr2=sqlite3_column_int64(sstmt.s.pstmt, 0);//note NULL is converted to integer 0
 		CATCH_SET_SUE_THROWs(;)
 		auto trd=readstreamintovector<1>(cin);
+		trd.shrink_to_fit();
 		auto sbptr=trd.data();
 		auto septr=sbptr+trd.size()-1;
 		constexpr auto lenlongestenglishword=sizeof "Antidisestablishmentarianism"-1;
