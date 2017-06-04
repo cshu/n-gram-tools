@@ -1,5 +1,6 @@
 #include <iostream>
 #include <regex>
+//? need -lpthread -ldl?
 #include "sqlite3.h"
 #ifndef SQLITE_MAX_COLUMN
 #define SQLITE_MAX_COLUMN 2000//sqlite3.h doesn't define it? usually should be 2000?
